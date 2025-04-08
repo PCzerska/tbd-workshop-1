@@ -113,10 +113,14 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
 ![img.png](doc/figures/infracost.png)
 
 11. Create a BigQuery dataset and an external table using SQL
-    
-    ***place the code and output here***
+    CREATE SCHEMA IF NOT EXISTS tbd_dataset;
+    CREATE OR REPLACE EXTERNAL TABLE tbd_dataset.external_sample
+    OPTIONS (
+      format = 'ORC',
+      uris = ['gs://tbd-2025l-313596-data/sample_data_100.orc']
+    );
    
-    ***why does ORC not require a table schema?***
+    ORC files do not require a separate schema because they contain an embedded description of the data structure, including column names and their types, within the file itself. This allows systems like BigQuery to automatically read the schema without the need for  prior definition.
 
 12. Find and correct the error in spark-job.py
 
