@@ -124,11 +124,11 @@ OPTIONS (
 );
    
 ORC files do not require a separate schema because they contain an embedded description of the data structure, including column names and their types, within the file itself. This allows systems like BigQuery to automatically read the schema without the need for  prior definition.
-'''
+
 12. Find and correct the error in spark-job.py
 
  Poprawa błędu:
- ```
+```
   -DATA_BUCKET = "gs://tbd-2025z-9900-data/data/shakespeare/"
   +DATA_BUCKET = "gs://tbd-2025l-313596-data/data/shakespeare/"
 ```
