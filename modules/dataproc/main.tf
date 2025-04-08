@@ -46,7 +46,7 @@ resource "google_dataproc_cluster" "tbd-dataproc-cluster" {
     }
 
     worker_config {
-      num_instances = 2
+      num_instances = 1
       machine_type  = var.machine_type
 
       disk_config {
