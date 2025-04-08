@@ -123,7 +123,7 @@ OPTIONS (
   uris = ['gs://tbd-2025l-313596-data/sample_data_100.orc']
 );
 ```  
-ORC files do not require a separate schema because they contain an embedded description of the data structure, including column names and their types, within the file itself. This allows systems like BigQuery to automatically read the schema without the need for  prior definition.
+Pliki ORC nie wymagają osobnego schematu, ponieważ zawierają wbudowany opis struktury danych, czyli nazwy kolumn i ich typy, w samym pliku. Dzięki temu systemy, takie jak BigQuery, mogą automatycznie odczytać schemat bez potrzeby jego wcześniejszej definicji. przetłumacz na angielski.
 
 12. Find and correct the error in spark-job.py
 
@@ -134,6 +134,10 @@ ORC files do not require a separate schema because they contain an embedded desc
 ```
 
 Błąd polegał na wskazaniu niepoprawnej ścieżki do bucketa. Podczas uruchamiania zadania Spark na klastrze Dataproc, wystąpił błąd wskazujący na brak dostępu do pliku. Błąd został wykryty na podstawie logów w konsoli Google Cloud. 
+Po ponownym uruchomieniu joba:
+
+![obraz](https://github.com/user-attachments/assets/fa38703d-bf4f-448e-a58e-80f746c13c78)
+
 
 13. Add support for preemptible/spot instances in a Dataproc cluster
 
