@@ -141,6 +141,18 @@ Po ponownym uruchomieniu joba:
 
 13. Add support for preemptible/spot instances in a Dataproc cluster
 
-    ***place the link to the modified file and inserted terraform code***
-    
-    
+    Modified file: https://github.com/PCzerska/tbd-workshop-1/blob/master/modules/dataproc/main.tf
+
+```
+  + secondary_worker_config {
+            num_instances  = 1
+            preemptibility = "PREEMPTIBLE"
+            machine_type   = var.worker_machine_type
+      
+            disk_config {
+              boot_disk_type    = "pd-standard"
+              boot_disk_size_gb = 100
+            }
+  
+      }    
+ ```
