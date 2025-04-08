@@ -124,7 +124,13 @@ create a sample usage profiles and add it to the Infracost task in CI/CD pipelin
 
 12. Find and correct the error in spark-job.py
 
-    ***describe the cause and how to find the error***
+ Poprawa błędu:
+ ```
+  -DATA_BUCKET = "gs://tbd-2025z-9900-data/data/shakespeare/"
+  +DATA_BUCKET = "gs://tbd-2025l-313596-data/data/shakespeare/"
+```
+
+Błąd polegał na wskazaniu niepoprawnej ścieżki do bucketa. Podczas uruchamiania zadania Spark na klastrze Dataproc, wystąpił błąd wskazujący na brak dostępu do pliku. Błąd został wykryty na podstawie logów w konsoli Google Cloud. 
 
 13. Add support for preemptible/spot instances in a Dataproc cluster
 
