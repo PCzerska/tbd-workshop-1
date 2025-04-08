@@ -29,9 +29,12 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
    
 8. Reach YARN UI
    
-   ***place the command you used for setting up the tunnel, the port and the screenshot of YARN UI here***
+   gcloud compute ssh tbd-cluster-m --project=tbd-2025l-313596 --zone=europe-west1-d --tunnel-through-iap -- -L 8088:localhost:8088
+   ![obraz](https://github.com/user-attachments/assets/53656485-a08e-40f6-bdec-e0da198c694c)
+
+
    
-9. Draw an architecture diagram (e.g. in draw.io) that includes:
+10. Draw an architecture diagram (e.g. in draw.io) that includes:
     1. VPC topology with service assignment to subnets
     2. Description of the components of service accounts
     3. List of buckets for disposal
@@ -39,7 +42,7 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
   
     ***place your diagram here***
 
-10. Create a new PR and add costs by entering the expected consumption into Infracost
+11. Create a new PR and add costs by entering the expected consumption into Infracost
 For all the resources of type: `google_artifact_registry`, `google_storage_bucket`, `google_service_networking_connection`
 create a sample usage profiles and add it to the Infracost task in CI/CD pipeline. Usage file [example](https://github.com/infracost/infracost/blob/master/infracost-usage-example.yml) 
 
