@@ -48,6 +48,7 @@ resource "google_dataproc_cluster" "tbd-dataproc-cluster" {
         boot_disk_size_gb = 100
       }
 
+
     }
   }
 }
