@@ -144,15 +144,10 @@ Po ponownym uruchomieniu joba:
     Modified file: https://github.com/PCzerska/tbd-workshop-1/blob/master/modules/dataproc/main.tf
 
 ```
-  + secondary_worker_config {
-            num_instances  = 1
-            preemptibility = "PREEMPTIBLE"
-            machine_type   = var.worker_machine_type
-      
-            disk_config {
-              boot_disk_type    = "pd-standard"
-              boot_disk_size_gb = 100
-            }
-  
-      }    
+  + preemptible_worker_config {
+      num_instances = 2
+    }   
  ```
+
+![image](https://github.com/user-attachments/assets/5e06844f-b58c-4c36-b52c-c325c2977625)
+
