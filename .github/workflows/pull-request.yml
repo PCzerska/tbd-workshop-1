@@ -103,6 +103,8 @@ jobs:
           })
 
           // 2. Prepare format of the comment
+          const planOutput = process.env.PLAN || 'No plan available';
+          
           const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
           #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
           #### Terraform Validation 🤖\`${{ steps.validate.outcome }}\`
